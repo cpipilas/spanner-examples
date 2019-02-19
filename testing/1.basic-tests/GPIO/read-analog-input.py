@@ -18,7 +18,7 @@ import Spanner
 from Testboard import Testboard
 
 testboard = Testboard("testboard_name")
-# Our device's 1st Analog Output Pin will be connected to the Testboard's A0,
+# our device's 1st Analog Output Pin will be connected to the Testboard's A0,
 # making it our Input Pin 1
 INPUT_PIN_1 = "A0"
 # Our device's 2nd Analog Output Pin will be connected to the Testboard's A4,
