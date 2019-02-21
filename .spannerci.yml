@@ -10,5 +10,5 @@ testing:
     device_update:
         devices:
             - $electronDev1
-        ota_method: particle
-        binary: auto
+        ota_method: "particle"
+        binary: "auto"
