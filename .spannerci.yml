@@ -6,9 +6,10 @@ build_binary:
 testing:
     script: testing/sample-test-script.py
     env_vars:
-        - $SPN_PARTICLE_TOKEN
+        - $electronDev1
     device_update:
         devices:
             - $electronDev1
         ota_method: "particle"
+        access_token: $PARTICLE_TOKEN
         binary: "auto"
