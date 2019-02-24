@@ -28,8 +28,8 @@ build_binary:
 #     env_vars:
 #         - $electronDev1
 #     device_update:
-#         devices:
-#             - $electronDev1
 #         ota_method: "particle"
 #         access_token: $PARTICLE_TOKEN
+#         devices:
+#             - $electronDev1
 #         binary: "auto"
