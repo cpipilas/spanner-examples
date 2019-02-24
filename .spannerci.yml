@@ -3,7 +3,21 @@ build_binary:
     pre_flight: 'rm -rf $AMAZON_FREERTOS_PATH/demos/ && mv $SPN_PROJECT_DIR/firmware/amazon_freertos/example_app $AMAZON_FREERTOS_PATH/demos'
     script: 'cd $AMAZON_FREERTOS_PATH/demos/espressif/esp32_devkitc_esp_wrover_kit/make/ && make && mv build/aws_demos.bin /tmp/aws_demos.bin'
     binary_name: '/tmp/aws_demos.bin'
-    
+
+# testing:
+#     script: testing/sample-test-script.py
+#     device_update:  
+#         ota_method: 'aws'
+#         access_key_id: $aws_access_key_id
+#         secret_access_key: $aws_secret_access_key
+#         s3_bucket: $aws_s3_bucket
+#         signer_profile: "copi_signature"
+#         aws_region: "us-east-1"
+#         targets: 
+#             - "arn:aws:iot:us-east-1:784114248083:thing/copi-DevKit"
+#         roleArn: "$aws_role_ota"
+#         binary: 'auto'
+
 # build_binary:
 #     builder: 'particle'
 #     binary_name: 'firmware/target/firmware.bin'
