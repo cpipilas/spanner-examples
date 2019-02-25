@@ -35,12 +35,12 @@
 /*
  * MQTT Broker endpoint.
  */
-static const char clientcredentialMQTT_BROKER_ENDPOINT[] = "a3njxk364xgnuf.iot.us-east-1.amazonaws.com";
+static const char clientcredentialMQTT_BROKER_ENDPOINT[] = "a1wpigcpoujckp.iot.us-east-2.amazonaws.com";
 
 
 /* Use of a "define" and not a "static const" here to be able to
 * use pre-compile concatenation on the string. */
-#define clientcredentialIOT_THING_NAME "Memas-DevKit"
+#define clientcredentialIOT_THING_NAME "span1Thing"
 
 /*
  * Port number the MQTT broker is using.
