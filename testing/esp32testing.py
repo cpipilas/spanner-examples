@@ -6,7 +6,7 @@ testboard = Testboard("testboard_name")
 
 # Our device's 1st Output Pin will be connected to the Testboard's D3, making it
 # our Input Pin 1
-INPUT_PIN_1 = "D3"
+INPUT_PIN_1 = "D5"
 
 def validate_digital_input_high():
     # check PIN state
