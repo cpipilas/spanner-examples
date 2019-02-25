@@ -22,9 +22,9 @@ def toggle_digital_output():
     # set PIN state
     testboard.digitalWrite(OUTPUT_PIN, 'HIGH')
 
-    #time.sleep(2)
+    time.sleep(2)
 
-    #testboard.digitalWrite(OUTPUT_PIN, 'LOW')
+    testboard.digitalWrite(OUTPUT_PIN, 'LOW')
 
 if __name__ == "__main__":
     toggle_digital_output()
