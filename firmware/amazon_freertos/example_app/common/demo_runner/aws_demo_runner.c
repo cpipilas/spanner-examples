@@ -38,7 +38,7 @@
 /* Demo declarations. */
 /* extern void vStartDeviceDefenderDemo( void ); */
 /* extern void vStartGreenGrassDiscoveryTask( void ); */
-//extern void vStartMQTTEchoDemo( void );
+/*extern void vStartMQTTEchoDemo( void );*/
  extern void vStartOTAUpdateDemoTask( void );
 /* extern void vStartShadowDemoTasks( void ); */
 /* extern void vStartSimpleTCPServerTasks( void ); */
