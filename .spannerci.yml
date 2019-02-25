@@ -8,8 +8,8 @@ testing:
     script: testing/esp32testing.py
     device_update:  
         ota_method: 'aws'
-        access_key_id: 'AKIAJHS5GQRETLNBL7PA'
-        secret_access_key: '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'
+        access_key_id: '$accesskeyid'
+        secret_access_key: '$secretkey'
         s3_bucket: 'span3bucket'
         signer_profile: 'codesigner3'
         aws_region: "us-east-2"
