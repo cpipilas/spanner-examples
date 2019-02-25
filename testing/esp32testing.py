@@ -10,7 +10,7 @@ INPUT_PIN_1 = "D5"
 
 def validate_digital_input_high():
 
-    testboard.digitalWrite("D5", HIGH)
+    testboard.digitalWrite("D5", 'HIGH')
     sleep(2)
     
     # check PIN state
