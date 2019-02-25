@@ -40,7 +40,7 @@ static const char clientcredentialMQTT_BROKER_ENDPOINT[] = "a1wpigcpoujckp.iot.u
 
 /* Use of a "define" and not a "static const" here to be able to
 * use pre-compile concatenation on the string. */
-#define clientcredentialIOT_THING_NAME "span2Thing"
+#define clientcredentialIOT_THING_NAME "span3Thing"
 
 /*
  * Port number the MQTT broker is using.
