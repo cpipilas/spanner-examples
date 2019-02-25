@@ -11,7 +11,7 @@ testing:
         access_key_id: $aws_access_key_id
         secret_access_key: $aws_secret_access_key
         s3_bucket: $aws_s3_bucket
-        signer_profile: $signerProfile
+        signer_profile: s2signer
         aws_region: "us-east-2"
         targets: 
             - "arn:aws:iot:us-east-2:191306262427:thing/span2Thing"
