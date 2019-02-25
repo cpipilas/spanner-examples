@@ -14,7 +14,7 @@ testing:
         signer_profile: $signerProfile
         aws_region: "us-east-2"
         targets: 
-            - "arn:aws:iot:us-east-2:191306262427:thing/span1Thing"
+            - "arn:aws:iot:us-east-2:191306262427:thing/span2Thing"
         roleArn: "$aws_role_ota"
         binary: 'auto'
 
