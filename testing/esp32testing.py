@@ -12,7 +12,7 @@ def validate_digital_input_high():
     # check PIN state
     value = testboard.digitalRead(INPUT_PIN_1)
 
-    Spanner.assertFalse(value);
+    Spanner.assertTrue(value);
 
 if __name__ == "__main__":
 
