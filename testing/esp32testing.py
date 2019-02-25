@@ -9,9 +9,6 @@ testboard = Testboard("testboard_name")
 INPUT_PIN_1 = "D5"
 
 def validate_digital_input_high():
-
-    testboard.digitalWrite("D5", 'HIGH')
-    time.sleep(2)
     
     # check PIN state
     value = testboard.digitalRead(INPUT_PIN_1)
