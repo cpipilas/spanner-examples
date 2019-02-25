@@ -5,7 +5,7 @@ build_binary:
     binary_name: '/tmp/aws_demos.bin'
 
 testing:
-    script: testing/sample-test-script.py
+    script: testing/1.basic-tests/GPIO/set-digital-output.py
     device_update:  
         ota_method: 'aws'
         access_key_id: $aws_access_key_id
