@@ -1,35 +1,27 @@
-build_binary:
-    builder: 'aws esp32'
-    pre_flight: 'rm -rf $AMAZON_FREERTOS_PATH/demos/ && mv $SPN_PROJECT_DIR/firmware/amazon_freertos/example_app $AMAZON_FREERTOS_PATH/demos'
-    script: 'cd $AMAZON_FREERTOS_PATH/demos/espressif/esp32_devkitc_esp_wrover_kit/make/ && make && mv build/aws_demos.bin /tmp/aws_demos.bin'
-    binary_name: '/tmp/aws_demos.bin'
+# build_binary:
+#     builder: 'aws esp32'
+#     pre_flight: 'rm -rf $AMAZON_FREERTOS_PATH/demos/ && mv $SPN_PROJECT_DIR/firmware/amazon_freertos/example_app $AMAZON_FREERTOS_PATH/demos'
+#     script: 'cd $AMAZON_FREERTOS_PATH/demos/espressif/esp32_devkitc_esp_wrover_kit/make/ && make && mv build/aws_demos.bin /tmp/aws_demos.bin'
+#     binary_name: '/tmp/aws_demos.bin'
 
-testing:
-    script: testing/esp32testing.py
-    device_update:  
-        ota_method: 'aws'
-        access_key_id: '$accesskeyid'
-        secret_access_key: '$secretkey'
-        s3_bucket: 'span3bucket'
-        signer_profile: 'codesigner3'
-        aws_region: "us-east-2"
-        targets: 
-            - "arn:aws:iot:us-east-2:191306262427:thing/span3Thing"
-        roleArn: 'arn:aws:iam::191306262427:role/BBBotaupdate'
-        binary: 'auto'
+# testing:
+#     script: testing/esp32testing.py
+#     device_update:  
+#         ota_method: 'aws'
+#         access_key_id: '$accesskeyid'
+#         secret_access_key: '$secretkey'
+#         s3_bucket: 'span3bucket'
+#         signer_profile: 'codesigner3'
+#         aws_region: "us-east-2"
+#         targets: 
+#             - "arn:aws:iot:us-east-2:191306262427:thing/span3Thing"
+#         roleArn: 'arn:aws:iam::191306262427:role/BBBotaupdate'
+#         binary: 'auto'
 
 # build_binary:
 #     builder: 'particle'
 #     binary_name: 'firmware/target/firmware.bin'
 #     script: cd $SPN_BUILDER_SDK && make PLATFORM=electron APPDIR=$SPN_PROJECT_DIR/firmware
     
-# testing:
-#     script: testing/sample-test-script.py
-#     env_vars:
-#         - $electronDev1
-#     device_update:
-#         ota_method: "particle"
-#         access_token: $PARTICLE_TOKEN
-#         devices:
-#             - $electronDev1
-#         binary: "auto"
+testing:
+    script: testing/3.complex-tests/measure-power-consumption.py
