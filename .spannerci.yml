@@ -23,5 +23,8 @@
 #     binary_name: 'firmware/target/firmware.bin'
 #     script: cd $SPN_BUILDER_SDK && make PLATFORM=electron APPDIR=$SPN_PROJECT_DIR/firmware
     
+#testing:
+#    script: testing/3.complex-tests/measure-power-consumption.py
+
 testing:
-    script: testing/3.complex-tests/measure-power-consumption.py
+    script: 'pytest -s testing/1.basic-tests/GPIO/read-digital-output.py'
