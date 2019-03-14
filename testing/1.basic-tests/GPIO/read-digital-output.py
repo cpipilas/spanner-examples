@@ -19,7 +19,7 @@ testboard = Testboard("argon")
 
 # Our device's 1st Output Pin will be connected to the Testboard's D7, making it
 # our Input Pin 1
-INPUT_PIN_1 = "D6"
+INPUT_PIN_1 = "D4"
 # Our device's 2nd Output Pin will be connected to the Testboard's D5, making it
 # our Input Pin 2
 INPUT_PIN_2 = "D5"
