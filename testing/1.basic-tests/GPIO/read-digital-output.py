@@ -12,8 +12,7 @@
 # If you want to replicate this setup, you can use our Particle Photon Testboard
 # and connect the D5 pin to GND, and the D7 pin to 3V3.
 
-import time
-import Spanner
+import pytest
 from Testboard import Testboard
 
 testboard = Testboard("testboard_name")
@@ -25,22 +24,10 @@ INPUT_PIN_1 = "D7"
 # our Input Pin 2
 INPUT_PIN_2 = "D5"
 
-def validate_digital_input_high():
-    # check PIN state
+def test_validate_digital_input_high():
     value = testboard.digitalRead(INPUT_PIN_1)
+    assert value != 0
 
-    Spanner.assertTrue(value);
-
-def validate_digital_input_low():
-    # check PIN state
+def test_validate_digital_input_low():
     value = testboard.digitalRead(INPUT_PIN_2)
-
-    Spanner.assertFalse(value);
-
-if __name__ == "__main__":
-
-    validate_digital_input_high()
-
-    time.sleep(2)
-
-    validate_digital_input_low()
+    assert value == 0
