@@ -3,14 +3,14 @@
 #
 
 # Particle Photon/Electron Firmware Building
-build_binary:
-    builder: 'particle'
-    binary_name: 'firmware/target/firmware.bin'
-    script: cd $SPN_BUILDER_SDK && make PLATFORM=photon APPDIR=$SPN_PROJECT_DIR/firmware/particle
+# build_binary:
+#     builder: 'particle'
+#     binary_name: 'firmware/target/firmware.bin'
+#     script: cd $SPN_BUILDER_SDK && make PLATFORM=photon APPDIR=$SPN_PROJECT_DIR/firmware/particle
 
 ## Particle Device Testing  
-#testing:
-#    script: 'pytest -s --verbose testing/sample-test-script.py'
+testing:
+   script: 'pytest -s --verbose testing/1.basic-tests/GPIO/read-analog-input.py'
 #        env_vars:
 #            - $DEVID_1
 #    device_update:
