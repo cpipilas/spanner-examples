@@ -10,7 +10,7 @@
 
 ## Particle Device Testing  
 testing:
-    script: 'pytest -s --verbose testing/1.basic-tests/GPIO/read-analog-input.py'
+    script: 'pytest -s --verbose testing/1.basic-tests/GPIO/read-digital-output.py'
 #        env_vars:
 #            - $DEVID_1
 #    device_update:
@@ -26,7 +26,7 @@ testing:
 # build_binary:
 #     builder: 'aws esp32'
 #     pre_flight: 'rm -rf $AMAZON_FREERTOS_PATH/demos/ && mv $SPN_PROJECT_DIR/firmware/amazon_freertos/example_app $AMAZON_FREERTOS_PATH/demos'
-#     script: 'cd $AMAZON_FREERTOS_PATH/demos/espressif/esp32_devkitc_esp_wrover_kit/make/ && make && mv build/aws_demos.bin /tmp/aws_demos.bin'
+#     script: 'cd $AMAZON_FREERTOS_PATH/demos/espressif/esp32_dereadvkitc_esp_wrover_kit/make/ && make && mv build/aws_demos.bin /tmp/aws_demos.bin'
 #     binary_name: '/tmp/aws_demos.bin'
 #
 # testing:
