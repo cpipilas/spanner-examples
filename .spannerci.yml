@@ -1,30 +1,44 @@
+#
+# Spanner CI configuration file
+#
+
+# Particle Photon/Electron Firmware Building
+build_binary:
+    builder: 'particle'
+    binary_name: 'firmware/target/firmware.bin'
+    script: cd $SPN_BUILDER_SDK && make PLATFORM=photon APPDIR=$SPN_PROJECT_DIR/firmware/particle
+
+## Particle Device Testing  
+#testing:
+#    script: 'pytest -s --verbose testing/sample-test-script.py'
+#        env_vars:
+#            - $DEVID_1
+#    device_update:
+#        devices:
+#            - $DEVID_1
+#        access_token: $PARTICLE_TOKEN
+#        ota_method: particle
+#        binary: auto
+
+#
+## Amazon FreeRTOS building & testing
+#
 # build_binary:
 #     builder: 'aws esp32'
 #     pre_flight: 'rm -rf $AMAZON_FREERTOS_PATH/demos/ && mv $SPN_PROJECT_DIR/firmware/amazon_freertos/example_app $AMAZON_FREERTOS_PATH/demos'
 #     script: 'cd $AMAZON_FREERTOS_PATH/demos/espressif/esp32_devkitc_esp_wrover_kit/make/ && make && mv build/aws_demos.bin /tmp/aws_demos.bin'
 #     binary_name: '/tmp/aws_demos.bin'
-
+#
 # testing:
-#     script: testing/esp32testing.py
+#     script: 'pytest -s --verbose testing/sample-test-script.py'
 #     device_update:  
 #         ota_method: 'aws'
-#         access_key_id: '$accesskeyid'
-#         secret_access_key: '$secretkey'
-#         s3_bucket: 'span3bucket'
-#         signer_profile: 'codesigner3'
-#         aws_region: "us-east-2"
+#         access_key_id: $aws_access_key_id
+#         secret_access_key: $aws_secret_access_key
+#         s3_bucket: $aws_s3_bucket
+#         signer_profile: "usersigner_signature"
+#         aws_region: "us-east-1"
 #         targets: 
-#             - "arn:aws:iot:us-east-2:191306262427:thing/span3Thing"
-#         roleArn: 'arn:aws:iam::191306262427:role/BBBotaupdate'
+#             - "arn:aws:iot:us-east-1:784114248083:thing/mything-DevKit"
+#         roleArn: "$aws_role_ota"
 #         binary: 'auto'
-
-# build_binary:
-#     builder: 'particle'
-#     binary_name: 'firmware/target/firmware.bin'
-#     script: cd $SPN_BUILDER_SDK && make PLATFORM=electron APPDIR=$SPN_PROJECT_DIR/firmware
-    
-#testing:
-#    script: testing/3.complex-tests/measure-power-consumption.py
-
-testing:
-    script: 'pytest --ignore="Testboard" -s testing/1.basic-tests/GPIO/read-digital-output.py'
