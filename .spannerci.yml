@@ -9,8 +9,8 @@ build_binary:
     script: cd $SPN_BUILDER_SDK && make PLATFORM=photon APPDIR=$SPN_PROJECT_DIR/firmware/particle
 
 ## Particle Device Testing  
-#testing:
-#    script: 'pytest -s --verbose testing/sample-test-script.py'
+testing:
+    script: 'pytest -s --verbose testing/sample-test-script.py'
 #        env_vars:
 #            - $DEVID_1
 #    device_update:
