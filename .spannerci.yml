@@ -10,7 +10,7 @@
 
 ## Particle Device Testing  
 testing:
-    script: 'pytest -s --verbose testing/1.basic-tests/GPIO/set-analog-output.py'
+    script: 'pytest -s --verbose testing/1.basic-tests/GPIO/set-digital-output.py'
 #        env_vars:
 #            - $DEVID_1
 #    device_update:
