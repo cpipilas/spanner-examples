@@ -11,8 +11,6 @@
 ## Particle Device Testing  
 testing:
     script: 'pytest -s --verbose testing/1.basic-tests/GPIO/set-pwm-output.py'
-Find file Copy path
-'
 #        env_vars:
 #            - $DEVID_1
 #    device_update:
