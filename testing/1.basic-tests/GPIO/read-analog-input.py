@@ -47,6 +47,7 @@ def test_validate_analog_input_less():
     # mind that this value could be slightly less accurate, and given that it's
     # a float it's not the best fit for checking Equality. Still, it's good
     # enough for most purposes.
-    value = testboard.analogReadVoltage(INPUT_PIN_2)
+    value = testboard.analogRead(INPUT_PIN_2)
+    voltage = value/4095*3.3
 
     assert value < 2.0
