@@ -50,4 +50,4 @@ def test_validate_analog_input_less():
     value = testboard.analogRead(INPUT_PIN_2)
     voltage = value/4095*3.3
 
-    assert value < 2.0
+    assert voltage < 2.0
