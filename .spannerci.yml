@@ -10,8 +10,9 @@
 
 ## Particle Device Testing  
 testing:
-    script: 'pytest -s --verbose testing/1.basic-tests/GPIO/set-pwm-output.py'
-#        env_vars:
+    script: 'pytest -s --verbose testing/1.basic-tests/network-events/send-network-cmd-to-device.py'
+    env_vars:
+        - $IFTTT_API_KEY
 #            - $DEVID_1
 #    device_update:
 #        devices:
