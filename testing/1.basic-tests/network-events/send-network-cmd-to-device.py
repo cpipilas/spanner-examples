@@ -26,9 +26,9 @@ def set_request(endpoint):
     return r.text
 
 def send_command(command):
-    endpoint = 'https://maker.ifttt.com/trigger/'+command+'/with/key/'+ifttt_key
-    return set_request(endpoint)
-
+    #endpoint = 'https://maker.ifttt.com/trigger/'+command+'/with/key/'+ifttt_key
+    #return set_request(endpoint)
+    return 0
 
 def send_network_cmds():
     # send network command to our device
