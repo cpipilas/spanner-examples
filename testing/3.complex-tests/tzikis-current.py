@@ -2,8 +2,8 @@ import time
 import pytest
 from SpannerTestboard import SpannerTestboard
 
-testboard = SpannerTestboard("testboard_name")
-
+#testboard = SpannerTestboard("testboard_name")
+testboard = SpannerTestboard("photon-testboard")
 
 BATTERY_RELAY_PIN = "D2"
 MAINS_RELAY_PIN = "D6"
