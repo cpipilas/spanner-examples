@@ -34,11 +34,11 @@ def test_measure_power_consumption():
 
     # Get an instant measurement
     i = 1
-    while i < 500: 
+    while i < 100: 
         current_ma = testboard.ina219_getValue(INA219.CURRENT_MA)
         print (current_ma)
         assert (current_ma < 30 and current_ma > 29.5)
-        time.sleep(0.001)
+        time.sleep(0.1)
         i += 1
     
     # Make sure the total power consumption didn't exceed 100mAh
