@@ -10,7 +10,7 @@
 
 ## Particle Device Testing  
 testing:
-    script: 'pytest -s --verbose testing/1.basic-tests/GPIO/set-pwm-output.py'
+    script: 'pytest -s --verbose testing/3.complex-tests/measure-power-consumption.py'
 #        env_vars:
 #            - $DEVID_1
 #    device_update:
