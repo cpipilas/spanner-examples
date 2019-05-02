@@ -29,7 +29,7 @@ def test_measure_power_consumption():
         #print("Current consumption (mA):")
         current = testboard.ina219_getValue(INA219.CURRENT_MA)
         print(current)
-        assert (current < 30.3 and current > 29.5)
+        assert (current < 30.3 and current > 29)
         time.sleep(1)
 
 
