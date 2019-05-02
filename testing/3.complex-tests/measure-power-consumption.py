@@ -37,6 +37,7 @@ def test_measure_power_consumption():
     while i < 300: 
         current_ma = testboard.ina219_getValue(INA219.CURRENT_MA)
         print (current_ma)
+        assert (current_ma < 31 && current_ma > 29)
         time.sleep(0.005)
         i += 1
     
