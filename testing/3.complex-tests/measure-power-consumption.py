@@ -31,34 +31,15 @@ def test_measure_power_consumption():
 
     #  Initialize the Power Control circuit (INA219)
     INA219 = SpannerTestboard.INA219
-        
-    # Start measuring power consumption. The interval (msecs) can be used to
-    # set the desired interval between measurements.
-    testboard.ina219_startMeasurement(INA219.CURRENT_MA, interval=1000)
-    testboard.ina219_startMeasurement(INA219.BUS_VOLTAGE_V)
-    testboard.ina219_startMeasurement(INA219.SHUNT_VOLTAGE_MV)
 
-    # Measure for 30 seconds
-    time.sleep(30)
-    
     # Get an instant measurement
-    print(testboard.ina219_getValue(INA219.SHUNT_VOLTAGE_MV))
+    i = 1
+    while i < 30: 
+        current_ma = testboard.ina219_getValue(INA219.CURRENT_MA)
+        print current_ma
+        time.sleep(1)
+        i += 1
     
-    # Stop measuring power consumption
-    testboard.ina219_stopMeasurement(INA219.CURRENT_MA)
-    testboard.ina219_stopMeasurement(INA219.BUS_VOLTAGE_V)
-    testboard.ina219_stopMeasurement(INA219.SHUNT_VOLTAGE_MV)
-
-    # Get average measurements
-    avg_ma =  testboard.ina219_getAverage(INA219.CURRENT_MA)
-    avg_v =  testboard.ina219_getAverage(INA219.BUS_VOLTAGE_V)
-    assert testboard.ina219_getAverage(INA219.SHUNT_VOLTAGE_MV) > 0
-    
-    print(avg_ma)
-    print(avg_v)
-
     # Make sure the total power consumption didn't exceed 100mAh
-    assert avg_ma < 100
+    assert < 100
     
-    # Make sure the total voltage didn't exceed 5.2V
-    assert avg_v < 5.2
