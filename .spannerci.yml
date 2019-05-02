@@ -10,7 +10,7 @@
 
 ## Particle Device Testing  
 testing:
-    script: 'pytest -s --verbose testing/3.complex-tests/measure-power-consumption.py'
+    script: 'pytest -s --verbose testing/3.complex-tests/tzikis-current.py'
 #        env_vars:
 #            - $DEVID_1
 #    device_update:
