@@ -34,20 +34,20 @@ def test_measure_power_consumption():
         print("Current Voltage %.3f mA %.3f V" % (current_ma, voltage) )
 
         # Get measurements every x seconds
-        time.sleep(5)
+        #time.sleep(5)
         
-    print("Emergency mode")
+#     print("Emergency mode")
     testboard.digitalWrite(MAINS_RELAY_PIN, 'LOW')
-    testboard.digitalWrite(BATTERY_RELAY_PIN, 'HIGH')
+#     testboard.digitalWrite(BATTERY_RELAY_PIN, 'HIGH')
         
-    start_time = time.time() # reset time
-    while not seconds_passed(start_time, 1 * 60): #seconds
-        # Read voltage value
-        voltage = testboard.ina219_getValue(INA219.BUS_VOLTAGE_V)
-        #print("Voltage %.3f V" % voltage)
+#     start_time = time.time() # reset time
+#     while not seconds_passed(start_time, 1 * 60): #seconds
+#         # Read voltage value
+#         voltage = testboard.ina219_getValue(INA219.BUS_VOLTAGE_V)
+#         #print("Voltage %.3f V" % voltage)
 
-        current_ma = testboard.ina219_getValue(INA219.CURRENT_MA)
-        print("Current Voltage %.3f mA %.3f V" % (current_ma, voltage) )
+#         current_ma = testboard.ina219_getValue(INA219.CURRENT_MA)
+#         print("Current Voltage %.3f mA %.3f V" % (current_ma, voltage) )
 
-        # Get measurements every 5 seconds
-        time.sleep(5)
+#         # Get measurements every 5 seconds
+#         time.sleep(5)
