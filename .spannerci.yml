@@ -3,10 +3,10 @@
 #
 
 # Particle Photon/Electron Firmware Building
-# build_binary:
-#     builder: 'particle'
-#     binary_name: 'firmware/target/firmware.bin'
-#     script: cd $SPN_BUILDER_SDK && make PLATFORM=photon APPDIR=$SPN_PROJECT_DIR/firmware/particle
+build_binary:
+    builder: 'particle'
+    binary_name: 'firmware/target/firmware.bin'
+    script: cd $SPN_BUILDER_SDK && make PLATFORM=photon APPDIR=$SPN_PROJECT_DIR/firmware/particle
 
 ## Particle Device Testing  
 #testing:
@@ -43,5 +43,5 @@
 #         roleArn: "$aws_role_ota"
 #         binary: 'auto'
 
-testing:
-    script: 'pytest -s --verbose sample-test-script-olympia.py'
+#testing:
+#    script: 'pytest -s --verbose sample-test-script-olympia.py'
