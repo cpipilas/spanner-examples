@@ -5,7 +5,8 @@
 # Particle Photon/Electron Firmware Building
 build_binary:
     builder: 'particle'
-    binary_name: 'firmware/target/firmware.bin'
+    artifacts: 
+        - firmware/target/firmware.bin
     script: cd $SPN_BUILDER_SDK && make PLATFORM=photon APPDIR=$SPN_PROJECT_DIR/firmware/particle
 
 ## Particle Device Testing  
