@@ -86,7 +86,7 @@ void loop() {
   digitalWrite(led2, LOW);
 
   // Wait 1 second...
-  delay(1000);
+  delay(5000);
 
   // And repeat!
 }
