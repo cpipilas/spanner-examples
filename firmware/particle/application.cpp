@@ -79,11 +79,11 @@ void loop() {
   digitalWrite(led2, HIGH);
 
   // We'll leave it on for 1 second...
-  delay(1000);
+  //delay(1000);
 
   // Then we'll turn it off...
-  digitalWrite(led1, LOW);
-  digitalWrite(led2, LOW);
+  //digitalWrite(led1, LOW);
+  //digitalWrite(led2, LOW);
 
   // Wait 1 second...
   delay(1000);
