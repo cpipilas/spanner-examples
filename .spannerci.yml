@@ -23,6 +23,7 @@ testing:
 #
 ## Amazon FreeRTOS building & testing
 #
+#
 # build_binary:
 #     builder: 'aws esp32'
 #     pre_flight: 'rm -rf $AMAZON_FREERTOS_PATH/demos/ && mv $SPN_PROJECT_DIR/firmware/amazon_freertos/example_app $AMAZON_FREERTOS_PATH/demos'
