@@ -22,18 +22,16 @@ testboard = SpannerTestboard("testboard_name")
 # our Input Pin 1
 INPUT_PIN_1 = "D3"
 
-def test_validate_digital_input_high():
-    # check PIN state
-    value = testboard.digitalRead(INPUT_PIN_1)
-    
-    assert value != 0
-
 def test_validate_digital_input_low():
-    # check PIN state
-    testboard.digitalWrite(INPUT_PIN_1, 'LOW')
-
-    time.sleep(5)
-    
     value = testboard.digitalRead(INPUT_PIN_1)
 
     assert value == 0
+
+def test_validate_digital_input_high():
+    testboard.digitalWrite(INPUT_PIN_1, 'HIGH')
+
+    time.sleep(5)
+
+    value = testboard.digitalRead(INPUT_PIN_1)
+    
+    assert value != 0
