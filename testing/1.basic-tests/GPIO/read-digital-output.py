@@ -30,7 +30,7 @@ def test_validate_digital_input_high():
 
 def test_validate_digital_input_low():
     # check PIN state
-    testboard.digitalWrite(INPUT_PIN_1, 'HIGH')
+    testboard.digitalWrite(INPUT_PIN_1, 'LOW')
 
     time.sleep(2)
     
