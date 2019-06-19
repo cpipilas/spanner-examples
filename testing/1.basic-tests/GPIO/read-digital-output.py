@@ -20,7 +20,7 @@ testboard = SpannerTestboard("testboard_name")
 
 # Our device's 1st Output Pin will be connected to the Testboard's D7, making it
 # our Input Pin 1
-INPUT_PIN_1 = "D7"
+INPUT_PIN_1 = "D2"
 
 def test_validate_digital_input_high():
     # check PIN state
