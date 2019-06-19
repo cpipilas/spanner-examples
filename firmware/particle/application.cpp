@@ -62,6 +62,10 @@ void setup() {
   // It's important you do this here, inside the setup() function rather than outside it or in the loop function.
 
   pinMode(led2, OUTPUT);
+  
+  // To blink the LED, first we'll turn it on...
+  digitalWrite(led2, HIGH);
+
 
 }
 
@@ -71,7 +75,7 @@ void setup() {
 
 void loop() {
   // To blink the LED, first we'll turn it on...
-  digitalWrite(led2, HIGH);
+  //digitalWrite(led2, HIGH);
 
   // We'll leave it on for 1 second...
   //delay(1000);
